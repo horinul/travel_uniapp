@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"login .",[1],"regist{ height: 80px; text-align: center; line-height: 80px; font-size: 18px; background-color: white; border-radius: 10px; }\n.",[1],"regist{ background-color:#5BC19A; color: white; }\n",],undefined,{path:"./pages/register/entrance.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/register/entrance.wxml') } }));

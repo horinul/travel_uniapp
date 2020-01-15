@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"content{ width: 100%; }\nwx-image{ width: 33.3%; height: 100px; }\nwx-text{ width: 33.3%; height: 25px; line-height: 25px; text-align: 18px; text-align: center; vertical-align: middle; }\n",],undefined,{path:"./pages/index/intro.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/intro.wxml') } }));

@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/register/entrance",
+    "pages/register/login",
+    "pages/register/regist",
+    "pages/register/forget",
+    "pages/index/intro",
+    "pages/detail/detail",
+    "pages/comment/comment",
+    "pages/mine/collect/collect",
+    "pages/mine/message/message"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/index/index.png",
+        "selectedIconPath": "static/index/index-select.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "发现",
+        "iconPath": "static/find/find.png",
+        "selectedIconPath": "static/find/find-select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/mine/mine.png",
+        "selectedIconPath": "static/mine/mine-select.png"
+      }
+    ]
+  },
+  "nvue": {
+    "pages": {
+      "pages/search/search.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTitleText": "发现"
+        },
+        "nvue": true
+      }
+    }
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "travel",
+  "compilerVersion": "2.3.7",
+  "usingComponents": {}
+}

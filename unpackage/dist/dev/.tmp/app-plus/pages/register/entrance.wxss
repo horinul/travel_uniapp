@@ -1,0 +1,14 @@
+
+.login .regist{
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 18px;
+	background-color: white;
+	border-radius: 10px;
+}
+.regist{
+	background-color:#5BC19A;
+	color: white;
+}
+

@@ -1,0 +1,1 @@
+<view class="content"><image src="{{img}}"></image><text>{{text}}</text></view>

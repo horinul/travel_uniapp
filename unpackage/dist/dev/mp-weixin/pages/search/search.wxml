@@ -1,0 +1,1 @@
+<view style="width:100%;"><button type="primary" data-event-opts="{{[['tap',[['add',['$event']]]]]}}" bindtap="__e">点击测试</button><button type="primary" data-event-opts="{{[['tap',[['add2',['$event']]]]]}}" bindtap="__e">计算</button></view>

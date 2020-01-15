@@ -1,0 +1,1 @@
+<view class="content"><block wx:for="{{lists}}" wx:for-item="list" wx:for-index="index" wx:key="index"><view class="flex"><checkbox value="msg"></checkbox><view class="main"><image class="scene" src="{{list.img}}"></image><text class="text">{{list.introText}}</text></view></view></block></view>
