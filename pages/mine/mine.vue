@@ -1,8 +1,6 @@
 <template>
 	<view>
-		<view class="com_img">
-			<view class="top_img"></view>
-		</view>
+		<view class="com_img"><view class="top_img"></view></view>
 
 		<navigator url="message/message">
 			<view class="btn_msg spe">
@@ -19,22 +17,22 @@
 				<view class="msg_icon"></view>
 			</view>
 		</navigator>
-		
-		
-		<view class="btn_msg">
-			<image src="../../static/mine/btn3.png" class="btn_img"></image>
-			<view class="msg_txt">我的评论</view>
-			<view class="msg_icon"></view>
-		</view>
-		
-		<view class="btn_msg">
-			<image src="../../static/mine/btn4.png" class="btn_img"></image>
-			<view class="msg_txt">我的足迹</view>
-			<view class="msg_icon"></view>
-		</view>
-		
-		
-		
+
+		<navigator url="comment_history/comment_history">
+			<view class="btn_msg">
+				<image src="../../static/mine/btn3.png" class="btn_img"></image>
+				<view class="msg_txt">我的评论</view>
+				<view class="msg_icon"></view>
+			</view>
+		</navigator>
+
+		<navigator url="footprint/footprint">
+			<view class="btn_msg">
+				<image src="../../static/mine/btn4.png" class="btn_img"></image>
+				<view class="msg_txt">我的足迹</view>
+				<view class="msg_icon"></view>
+			</view>
+		</navigator>
 	</view>
 </template>
 
@@ -56,45 +54,45 @@ export default {
 	height: 80px;
 	width: 80px;
 	margin: 0 auto;
-	background-color: #5BC19A;
+	background-color: #5bc19a;
 	border-radius: 50%;
 	margin-top: 20px;
-	background: url(../../static/mine/head.jpg) ;
+	background: url(../../static/mine/head.jpg);
 	background-size: 100% 100%;
 }
 
-.btn_msg{
+.btn_msg {
 	height: 50px;
 	width: 80%;
 	margin: 0 auto;
 	display: flex;
 	margin-top: 15px;
-	border: 1px solid #5BC19A;
+	border: 1px solid #5bc19a;
 	border-radius: 5px;
 	line-height: 50px;
 	position: relative;
 }
-.spe{
+.spe {
 	margin-top: 40px;
 }
-.btn_img{
+.btn_img {
 	margin-left: 10px;
 	height: 20px;
 	width: 20px;
 	margin-top: 15px;
 }
 
-.msg_txt{
+.msg_txt {
 	width: 60%;
 	height: 100%;
 	margin-left: 15px;
 }
-.msg_icon{
-	height:0;
+.msg_icon {
+	height: 0;
 	width: 0;
 	border-top: 10px solid transparent;
-	border-bottom:  10px solid transparent;
-	border-left: 10px solid #5BC19A;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #5bc19a;
 	margin-top: 15px;
 	position: absolute;
 	right: 20px;

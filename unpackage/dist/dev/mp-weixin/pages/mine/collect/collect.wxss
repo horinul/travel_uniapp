@@ -10,7 +10,10 @@ checkbox{
 	padding: 15px;
 }
 .scene{
-	width: 30%;
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	    -ms-flex: 3;
+	        flex: 3;
 	height: 100px;
 	border-radius: 15px;
 }
@@ -22,10 +25,12 @@ checkbox{
 	height: 100px;
 }
 .text{
-	width: 65%;
+	-webkit-box-flex: 7;
+	-webkit-flex: 7;
+	    -ms-flex: 7;
+	        flex: 7;
 	height: 100px;
 	font-size: 16px;
 	margin-left: 5%;
-	margin-top: 10px;
 }
 

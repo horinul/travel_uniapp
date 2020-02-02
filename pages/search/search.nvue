@@ -1,72 +1,23 @@
 <template>
-	<!-- 		<waterfall column-count="2" column-width="auto">
-			<cell v-for="(list, index) in lists" :key="index">
-				<view>
-					<image :src="list.place" class=""></image>
-					<view>{{ list.comment }}</view>
-				</view>
-				<view class="content">
-					<view class="msg">
-						<image class="head" :src="list.head"></image>
-						<view>{{ list.id }}</view>
+	<view>
+		<uni-grid :column="2" :showBorder="false" style="height:100%;padding: 0;" :square="false">
+			<uni-grid-item v-for="(item, index) in list" :key="index" style="width: 50%;margin-bottom: 10px;">
+					<view class="comment">
+						<image :src="item.src" style="width: 90%;height: 300px;border-radius: 7px;margin: 0 auto;"></image>
+						<text class="text">{{ item.text }}</text>
 					</view>
-					<view class="like">
-						<image class="like-img" src="../../static/mine/collect/pho2.jpg"></image>
-						<view class="like-img"></view>
-						<view>{{ list.count }}</view>
-					</view>
-				</view>
-			</cell>
-		</waterfall>
-		 -->
-	<!-- 	<waterfall :line-gap="200" :watch="items">
-
-		each component is wrapped by a waterfall slot
-		<waterfall-slot :width="50%" :height="100px" :order="index" :key="item.id">
-			<view>
-				<image :src="list.place" class=""></image>
-				<view>{{ list.comment }}</view>
-			</view>
-			<view class="content">
-				<view class="msg">
-					<image class="head" :src="list.head"></image>
-					<view>{{ list.id }}</view>
-				</view>
-				<view class="like">
-					<image class="like-img" src="../../static/mine/collect/pho2.jpg"></image>
-					<view class="like-img"></view>
-					<view>{{ list.count }}</view>
-				</view>
-			</view>
-		</waterfall-slot>
-	</waterfall> -->
-	<!-- 本身自带的waterfall组件使用一直出错且无法找到原因 -->
-	<view style="width: 100%;">
-		<!-- <uni-grid :column="2" :show-border="false"  :square="false" style="width: 100%;">
-				
-			<view v-for="(list, index) in lists" :key="index" >
-				<uni-grid-item class="item" >
-					
-					<image :src="list.place" class="pho"></image>
-					<view class="comment">{{ list.comment }}</view>
-				
-					<view class="content" >
-						<view class="msg">
-							<image class="head" :src="list.head"></image>
-							<view class="id">{{ list.id }}</view>
+					<view class="detail">
+						<view class="id">
+							<image src="../../static/mine/head.jpg" class="head"></image>
+							<text>{{item.id}}</text>
 						</view>
 						<view class="like">
-							<view class="like-img"></view>
-							<view class="count">{{ list.count }}</view>
+							<image src="../../static/search/like.png" class="like_png" @click="click_like()"></image>
+							<text>{{item.like_number}}</text>
 						</view>
 					</view>
-					<view style="background-color: #1A1A1A;"></view>
-				</uni-grid-item>
-			</view>
-				
-		</uni-grid> -->
-		<button type="primary" @click="add">点击测试</button>
-		<button type="primary" @click="add2">计算</button>
+			</uni-grid-item>
+		</uni-grid>
 	</view>
 </template>
 
@@ -75,118 +26,63 @@ import uniGrid from '@/components/uni-grid/uni-grid.vue';
 import uniGridItem from '@/components/uni-grid-item/uni-grid-item.vue';
 
 export default {
-	data: function() {
+	data() {
 		return {
-			lists: [
-				{
-					place: '../../static/register/entrance.png',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/mine/head.jpg',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/register/entrance.png',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/register/entrance.png',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/register/entrance.png',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/register/entrance.png',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/register/entrance.png',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				},
-				{
-					place: '../../static/mine/head.jpg',
-					comment: '今天新教的天气真好',
-					id: '小明',
-					head: '../../static/mine/head.jpg',
-					count: 20
-				}
-			],
-			result1:0
+			list: [
+				{ text: '今天新教的天气真好', src: '../../static/index/canteen.jpg',like_number:25,id:'小明' },
+				{ text: '今天新教的天气真好', src: '../../static/register/entrance.png',like_number:22,id:'小红' },
+				{ text: '今天新教的天气真好', src: '../../static/index/library.jpg',like_number:26,id:'小王' },
+				{ text: '今天新教的天气真好', src: '../../static/index/canteen.jpg',like_number:56,id:'小明' },
+				{ text: '今天新教的天气真好', src: '../../static/register/entrance.png',like_number:45,id:'小明' },
+				{ text: '今天新教的天气真好', src: '../../static/index/library.jpg',like_number:89,id:'大明' },
+				{ text: '今天新教的天气真好', src: '../../static/register/entrance.png',like_number:23,id:'小明' },
+				{ text: '今天新教的天气真好', src: '../../static/index/canteen.jpg',like_number:25,id:'小明' },
+				{ text: '今天新教的天气真好', src: '../../static/register/entrance.png',like_number:45,id:'小明' },
+				{ text: '今天新教的天气真好', src: '../../static/index/library.jpg',like_number:23,id:'小明' }
+			]
 		};
 	},
-	components: { uniGrid, uniGridItem },
 	methods: {
-		add2() {
-			var AddCount = plus.android.importClass('com.example.myapplication.AddCount');
-			var addCount = new AddCount();
-			this.result1 = addCount.add(1, 2);
+		click_like(){
+			this.list.like_number++;
 		}
+	},
+	components: {
+		uniGrid,
+		uniGridItem
 	}
 };
 </script>
 
 <style>
-.item {
-	width: 90%;
-	/* margin: 0 auto; */
-	height: 300px;
-}
-.comment {
-	font-size: 20px;
-}
-.pho {
+.text {
+	font-size: 18px;
 	width: 90%;
 	margin: 0 auto;
-	border-radius: 15px;
 }
-.content {
+.detail {
 	width: 90%;
-	height: 40px;
-	flex-direction: row;
-	margin: 15px 2.5% 0 5%;
-}
-.id {
-	font-size: 16px;
-}
-.msg {
-	flex-direction: row;
-}
-.like {
+	margin: 0 auto;
 	flex-direction: row;
 }
 .head {
-	width: 25px;
 	height: 25px;
-}
-.like-img {
 	width: 25px;
-	height: 25px;
+	border-radius: 50%;
 }
-.count {
-	font-size: 15px;
+.id {
+	width: 80%;
+	font-size: 18px;
+	flex-direction: row;
+}
+.like {
+	width: 20%;
+	font-size: 18px;
+	flex-direction: row;
+}
+.like_png {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
 }
 </style>

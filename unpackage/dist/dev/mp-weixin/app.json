@@ -11,7 +11,9 @@
     "pages/detail/detail",
     "pages/comment/comment",
     "pages/mine/collect/collect",
-    "pages/mine/message/message"
+    "pages/mine/message/message",
+    "pages/mine/comment_history/comment_history",
+    "pages/mine/footprint/footprint"
   ],
   "subPackages": [],
   "window": {

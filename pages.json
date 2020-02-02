@@ -6,12 +6,12 @@
 				"navigationBarTitleText": "首页"
 			}
 		},
-		{
-			"path": "pages/search/search",
-			"style": {
-				"navigationBarTitleText": "发现"
-			}
-		}, 
+		 {
+			"path":"pages/search/search",
+			 "style":{
+				 "navigationBarTitleText":"发现"
+			 }
+		 },
 		{
 			"path": "pages/mine/mine",
 			"style": {
@@ -50,6 +50,18 @@
 			"style":{
 				"navigationBarBackgroundColor":"#FFFFFF",
 				"navigationBarTitleText":"个人信息"
+			}
+		},
+		{
+			"path":"pages/mine/comment_history/comment_history",
+			"style":{
+				"navigationBarTitleText":"我的评论"
+			}
+		},
+		{
+			"path":"pages/mine/footprint/footprint",
+			"style":{
+				"navigationBarTitleText":"我的足迹"
 			}
 		}
 

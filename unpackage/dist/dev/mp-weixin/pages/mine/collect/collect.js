@@ -65,10 +65,10 @@ var _default =
     return {
       lists:
       [
-      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学新教学楼，建于多少年我也不知道，我词穷，不知道写什么了，就等李大佬后端传数据了', msg: '' },
-      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学新教学楼，建于多少年我也不知道，我词穷，不知道写什么了，就等李大佬后端传数据了', msg: '' },
-      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学新教学楼，建于多少年我也不知道，我词穷，不知道写什么了，就等李大佬后端传数据了', msg: '' },
-      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学新教学楼，建于多少年我也不知道，我词穷，不知道写什么了，就等李大佬后端传数据了', msg: '' }] };
+      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学图书馆是学校的文献信息中心，是为教学和科学研究服务的学术性机构，是学校高等教育和文化建设的重要基地，是建设“双一流”大学的重要支撑平台。', msg: '' },
+      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学图书馆是学校的文献信息中心，是为教学和科学研究服务的学术性机构，是学校高等教育和文化建设的重要基地，是建设“双一流”大学的重要支撑平台。', msg: '' },
+      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学图书馆是学校的文献信息中心，是为教学和科学研究服务的学术性机构，是学校高等教育和文化建设的重要基地，是建设“双一流”大学的重要支撑平台。', msg: '' },
+      { img: '../../../static/mine/collect/pho1.jpg', introText: '成都理工大学图书馆是学校的文献信息中心，是为教学和科学研究服务的学术性机构，是学校高等教育和文化建设的重要基地，是建设“双一流”大学的重要支撑平台。', msg: '' }] };
 
 
   } };exports.default = _default;

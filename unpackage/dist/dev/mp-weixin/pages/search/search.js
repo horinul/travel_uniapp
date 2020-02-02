@@ -180,126 +180,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
   data: function data() {
     return {
-      lists: [
-      {
-        place: '../../static/register/entrance.png',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
+      list: [
+      { text: '今天新教的天气真好', src: '../../static/index/canteen.jpg', like_number: 25, id: '小明' },
+      { text: '今天新教的天气真好', src: '../../static/register/entrance.png', like_number: 22, id: '小红' },
+      { text: '今天新教的天气真好', src: '../../static/index/library.jpg', like_number: 26, id: '小王' },
+      { text: '今天新教的天气真好', src: '../../static/index/canteen.jpg', like_number: 56, id: '小明' },
+      { text: '今天新教的天气真好', src: '../../static/register/entrance.png', like_number: 45, id: '小明' },
+      { text: '今天新教的天气真好', src: '../../static/index/library.jpg', like_number: 89, id: '大明' },
+      { text: '今天新教的天气真好', src: '../../static/register/entrance.png', like_number: 23, id: '小明' },
+      { text: '今天新教的天气真好', src: '../../static/index/canteen.jpg', like_number: 25, id: '小明' },
+      { text: '今天新教的天气真好', src: '../../static/register/entrance.png', like_number: 45, id: '小明' },
+      { text: '今天新教的天气真好', src: '../../static/index/library.jpg', like_number: 23, id: '小明' }] };
 
-      {
-        place: '../../static/mine/head.jpg',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
-
-      {
-        place: '../../static/register/entrance.png',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
-
-      {
-        place: '../../static/register/entrance.png',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
-
-      {
-        place: '../../static/register/entrance.png',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
-
-      {
-        place: '../../static/register/entrance.png',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
-
-      {
-        place: '../../static/register/entrance.png',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 },
-
-      {
-        place: '../../static/mine/head.jpg',
-        comment: '今天新教的天气真好',
-        id: '小明',
-        head: '../../static/mine/head.jpg',
-        count: 20 }],
-
-
-      result1: 0 };
 
   },
-  components: { uniGrid: uniGrid, uniGridItem: uniGridItem },
   methods: {
-    add2: function add2() {
-      var AddCount = plus.android.importClass('com.example.myapplication.AddCount');
-      var addCount = new AddCount();
-      this.result1 = addCount.add(1, 2);
-    } } };exports.default = _default;
+    click_like: function click_like() {
+      this.list.like_number++;
+    } },
+
+  components: {
+    uniGrid: uniGrid,
+    uniGridItem: uniGridItem } };exports.default = _default;
 
 /***/ }),
 
