@@ -32,21 +32,22 @@ export default {
 	}
 	.flex{
 		display: flex;
+		flex-direction: row;
 		padding: 15px;
 	}
 
 	.scene{
-		flex: 3;
-		height: 100px;
+		width: 20%;
+		margin-left: 5%;
 		border-radius: 15px;
+		height: 120px;
 	}
 	.main{
 		display: flex;
-		height: 100px;	
 	}
 	.text{
-		flex: 7;
-		height: 100px;
+		width: 70%;
+		margin-left: 5%;
 		font-size: 16px;
 		margin-left: 5%;
 	}

@@ -15,13 +15,14 @@
 				<view class="like_num">{{like_num}}</view>
 			</view>
 		</view>
-		<view style="font-size: 25px;margin-left: 5%;margin-top: 20px;">评论</view>
+		<view style="font-size: 22px;margin-left: 5%;margin-top: 20px;">评论</view>
 		<view class="comment">
 			<view class="write">
-				<image src="../../static/mine/head.jpg" mode="" class="head"></image>
-				<input type="view" value="" placeholder="快来留下你的评论~" class="input" v-model="tmp.content" />
-			</view>
+				<image src="../../static/mine/head.jpg" mode="" class="head_spe"></image>
+				<textarea type="view" value="" placeholder="快来留下你的评论~" class="input" v-model="tmp.content" placeholder-style="font-size:18px;line-height:16px;padding-right:20px;"></textarea>
 			<button class="btn" @click="handin">提交</button>
+			</view>
+			
 			<view class="hr"></view>
 			<view class="com_history">
 				<view class="comment_all" v-for="(list, index) in lists" :key="index">
@@ -50,7 +51,7 @@ export default {
 			like_src:'../../static/search/like.png',
 			like_num:36,
 			tmp: { id: '小明', date: '2020-01-08', like_num: 0, content: '',src:'../../static/search/like.png' },
-			lists: [{ id: '小明', date: '2020-01-08', like_num: 5, content: '评论写的真棒，我如果有你这么会说，我就不会单身了！！',src:'../../static/search/like.png',index:0 }]
+			lists: [{ id: '小明', date: '2020-01-08', like_num: 5, content: '评论写的真棒!!!',src:'../../static/search/like.png',index:0 }]
 		};
 	},
 	methods: {
@@ -86,17 +87,18 @@ export default {
 
 <style>
 .btn {
+	background: #d9d9d9;
 	height: 25px;
-	line-height: 20px;
+	line-height: 25px;
 	width: 60px;
 	padding: 0;
 	border: 1px solid #fff;
-	border-radius: 5px;
-	background: #d9d9d9;
+	border-radius: 10px;
 	color: #ffffff;
 	font-size: 15px;
-	margin-left: 84%;
-	margin-top: 5px;
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
 }
 .message {
 	width: 100%;
@@ -108,6 +110,12 @@ export default {
 	border-radius: 50%;
 	margin-top: 5px;
 	margin-left: 5%;
+}
+.head_spe{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-top: 5px;
 }
 .head_detail {
 	display: flex;
@@ -123,14 +131,14 @@ export default {
 	border-radius: 10px;
 }
 .text {
-	font-size: 18px;
+	font-size: 16px;
 	width: 90%;
 	margin-left: 5%;
 }
 .like {
 	display: flex;
 	flex-direction: row;
-	font-size: 16px;
+	font-size: 15px;
 	margin-left: 85%;
 }
 .like_png {
@@ -139,17 +147,23 @@ export default {
 	margin-right: 5px;
 }
 .write {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	margin-top: 10px;
+	width: 90%;
+	margin-left: 5%;
 }
 .input {
-	width: 80%;
-	height: 40px;
 	margin-left: 10px;
 	background-color: #f9f9f9;
 	border-radius: 10px;
-	padding: 5px;
+	padding: 10px;
+	height: 100px;
+	border-radius: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding-right: 20px;
 }
 .hr {
 	width: 90%;
@@ -162,17 +176,18 @@ export default {
 	display: flex;
 	flex-direction: row;
 	margin-top: 15px;
+	position: relative;
 }
 .comment_msg {
-	width: 100px;
+	width: 220rpx;
 	font-size: 16px;
-	margin-left: 10px;
 }
 .comment_like {
 	display: flex;
 	flex-direction: row;
-	font-size: 16px;
-	margin-left: 55%;
+	font-size: 15px;
+	position: absolute;
+	right: 5%;
 	margin-top: 10px;
 }
 .comment_view {
@@ -180,5 +195,8 @@ export default {
 	margin-left: 7%;
 	font-size: 18px;
 	margin-top: 10px;
+}
+.com_history{
+	padding-bottom: 20px;
 }
 </style>

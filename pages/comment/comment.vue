@@ -4,7 +4,7 @@
 			<image src="../../static/detail/scenc.png" class="photo"></image>
 		</view>
 		<view class="com2">
-			<textarea type="text" v-model="tmp.comment" class="input" placeholder="快点评价吧，流了这么多的位置，不写太可惜了~" placeholder-style="font-size:18px;line-height:16px;padding-right:20px;"></textarea>
+			<textarea type="text" v-model="tmp.comment" class="input" placeholder="快点评价吧~" placeholder-style="font-size:18px;line-height:16px;padding-right:20px;"></textarea>
 			<button @click="sub" class="btn">提交</button>
 		</view>
 		<view style="margin-top: 10px;">

@@ -7,29 +7,28 @@ checkbox{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 	padding: 15px;
 }
 .scene{
-	-webkit-box-flex: 3;
-	-webkit-flex: 3;
-	    -ms-flex: 3;
-	        flex: 3;
-	height: 100px;
+	width: 20%;
+	margin-left: 5%;
 	border-radius: 15px;
+	height: 120px;
 }
 .main{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	height: 100px;
 }
 .text{
-	-webkit-box-flex: 7;
-	-webkit-flex: 7;
-	    -ms-flex: 7;
-	        flex: 7;
-	height: 100px;
+	width: 70%;
+	margin-left: 5%;
 	font-size: 16px;
 	margin-left: 5%;
 }

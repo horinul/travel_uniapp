@@ -7,25 +7,29 @@ checkbox{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 	padding: 15px;
 }
 .scene{
-	width: 30%;
-	height: 100px;
+	width: 20%;
+	margin-left: 5%;
 	border-radius: 15px;
+	height: 120px;
 }
 .main{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	height: 100px;
 }
 .text{
-	width: 65%;
-	height: 100px;
+	width: 70%;
+	margin-left: 5%;
 	font-size: 16px;
 	margin-left: 5%;
-	margin-top: 10px;
 }
 

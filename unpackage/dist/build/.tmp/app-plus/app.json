@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
     "pages/mine/mine",
     "pages/register/entrance",
     "pages/register/login",
@@ -10,7 +11,15 @@
     "pages/detail/detail",
     "pages/comment/comment",
     "pages/mine/collect/collect",
-    "pages/mine/message/message"
+    "pages/mine/message/message",
+    "pages/mine/comment_history/comment_history",
+    "pages/mine/footprint/footprint",
+    "pages/search/search_detail",
+    "pages/webview/foot",
+    "pages/webview/sport",
+    "pages/webview/science",
+    "pages/webview/study",
+    "pages/webview/rice"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -43,17 +52,6 @@
         "selectedIconPath": "static/mine/mine-select.png"
       }
     ]
-  },
-  "nvue": {
-    "pages": {
-      "pages/search/search.html": {
-        "window": {
-          "usingComponents": {},
-          "navigationBarTitleText": "发现"
-        },
-        "nvue": true
-      }
-    }
   },
   "nvueCompiler": "uni-app",
   "renderer": "auto",

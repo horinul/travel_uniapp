@@ -1,10 +1,10 @@
 <template>
 	<view>
-		<uni-grid :column="2" :showBorder="false" style="height:100%;padding: 0;" :square="false">
+		<uni-grid column="2" :showBorder="false" style="height:100%;padding: 0;" :square="false">
 			<uni-grid-item v-for="(item, index) in list" :key="index" style="width: 50%;margin-bottom: 10px;">
 				<navigator url="search_detail">
 					<view class="comment">
-						<image :src="item.src" style="width: 90%;height: 300px;border-radius: 7px;margin: 0 auto;"></image>
+						<image :src="item.src" style="width: 90%;height: 300px;border-radius: 7px;margin-left: 5%;"></image>
 						<text class="text">{{ item.text }}</text>
 					</view>
 					<view class="detail">
@@ -60,12 +60,14 @@ export default {
 .text {
 	font-size: 18px;
 	width: 90%;
-	margin: 0 auto;
+	margin-left: 5%;
 }
 .detail {
 	width: 90%;
-	margin: 0 auto;
+	margin-left: 5%;
+	display: flex;
 	flex-direction: row;
+	margin-top: 5px;
 }
 .head {
 	height: 25px;
@@ -75,16 +77,19 @@ export default {
 .id {
 	width: 80%;
 	font-size: 18px;
+	display: flex;
 	flex-direction: row;
 }
 .like {
-	width: 20%;
+	width: 30%;
 	font-size: 18px;
+	display: flex;
 	flex-direction: row;
 }
 .like_png {
 	width: 20px;
 	height: 20px;
+	margin-top: 1px;
 	margin-right: 5px;
 }
 </style>

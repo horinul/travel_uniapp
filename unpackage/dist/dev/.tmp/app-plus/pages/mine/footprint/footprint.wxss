@@ -1,0 +1,25 @@
+
+.component {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.img {
+	height: 130px;
+	-webkit-box-flex: 4;
+	-webkit-flex: 4;
+	    -ms-flex: 4;
+	        flex: 4;
+	margin: 10px;
+	border-radius: 10px;
+}
+.text {
+	-webkit-box-flex: 6;
+	-webkit-flex: 6;
+	    -ms-flex: 6;
+	        flex: 6;
+	margin: 12px;
+	font-size: 18px;
+}
+

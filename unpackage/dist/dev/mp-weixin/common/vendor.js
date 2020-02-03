@@ -1500,7 +1500,114 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 134:
+/***/ 14:
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 170:
 /*!*****************************************************************************!*\
   !*** D:/uniapp_test/travel/components/simple-address/city-data/province.js ***!
   \*****************************************************************************/
@@ -1654,7 +1761,7 @@ provinceData;exports.default = _default;
 
 /***/ }),
 
-/***/ 135:
+/***/ 171:
 /*!*************************************************************************!*\
   !*** D:/uniapp_test/travel/components/simple-address/city-data/city.js ***!
   \*************************************************************************/
@@ -3172,7 +3279,7 @@ cityData;exports.default = _default;
 
 /***/ }),
 
-/***/ 136:
+/***/ 172:
 /*!*************************************************************************!*\
   !*** D:/uniapp_test/travel/components/simple-address/city-data/area.js ***!
   \*************************************************************************/
@@ -15731,113 +15838,6 @@ areaData;exports.default = _default;
 
 /***/ }),
 
-/***/ 14:
-/*!********************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
 /***/ 2:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
@@ -22750,7 +22750,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "首页", "usingComponents": { "simple-address": "/components/simple-address/simple-address", "uni-grid": "/components/uni-grid/uni-grid", "uni-grid-item": "/components/uni-grid-item/uni-grid-item" } }, "pages/search/search": { "navigationBarTitleText": "发现", "usingComponents": { "uni-grid": "/components/uni-grid/uni-grid", "uni-grid-item": "/components/uni-grid-item/uni-grid-item" } }, "pages/mine/mine": { "navigationBarTitleText": "我的", "usingComponents": {} }, "pages/register/entrance": { "usingComponents": {} }, "pages/register/login": { "usingComponents": {} }, "pages/register/regist": { "usingComponents": {} }, "pages/register/forget": { "usingComponents": {} }, "pages/index/intro": { "usingComponents": {} }, "pages/detail/detail": { "usingComponents": {} }, "pages/comment/comment": { "usingComponents": {} }, "pages/mine/collect/collect": { "navigationBarTitleText": "我的收藏", "usingComponents": {} }, "pages/mine/message/message": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTitleText": "个人信息", "usingComponents": {} }, "pages/mine/comment_history/comment_history": { "navigationBarTitleText": "我的评论", "usingComponents": {} }, "pages/mine/footprint/footprint": { "navigationBarTitleText": "我的足迹", "usingComponents": {} }, "pages/search/search_detail": { "navigationBarTitleText": "内容详情", "usingComponents": {} }, "pages/webview/foot": { "usingComponents": {} }, "pages/webview/sport": {}, "pages/webview/science": {}, "pages/webview/study": {}, "pages/webview/rice": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "首页", "usingComponents": { "simple-address": "/components/simple-address/simple-address", "uni-grid": "/components/uni-grid/uni-grid", "uni-grid-item": "/components/uni-grid-item/uni-grid-item" } }, "pages/search/search": { "navigationBarTitleText": "发现", "usingComponents": { "uni-grid": "/components/uni-grid/uni-grid", "uni-grid-item": "/components/uni-grid-item/uni-grid-item" } }, "pages/mine/mine": { "navigationBarTitleText": "我的", "usingComponents": {} }, "pages/register/entrance": { "usingComponents": {} }, "pages/register/login": { "usingComponents": {} }, "pages/register/regist": { "usingComponents": {} }, "pages/register/forget": { "usingComponents": {} }, "pages/index/intro": { "usingComponents": {} }, "pages/detail/detail": { "usingComponents": {} }, "pages/comment/comment": { "usingComponents": {} }, "pages/mine/collect/collect": { "navigationBarTitleText": "我的收藏", "usingComponents": {} }, "pages/mine/message/message": { "navigationBarBackgroundColor": "#FFFFFF", "navigationBarTitleText": "个人信息", "usingComponents": {} }, "pages/mine/comment_history/comment_history": { "navigationBarTitleText": "我的评论", "usingComponents": {} }, "pages/mine/footprint/footprint": { "navigationBarTitleText": "我的足迹", "usingComponents": {} }, "pages/search/search_detail": { "navigationBarTitleText": "内容详情", "usingComponents": {} }, "pages/webview/foot": { "usingComponents": {} }, "pages/webview/sport": { "usingComponents": {} }, "pages/webview/science": { "usingComponents": {} }, "pages/webview/study": { "usingComponents": {} }, "pages/webview/rice": { "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 

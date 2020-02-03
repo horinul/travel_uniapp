@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"component { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }\n.",[1],"img { height: 130px; -webkit-box-flex: 4; -webkit-flex: 4; -ms-flex: 4; flex: 4; margin: 10px; border-radius: 10px; }\n.",[1],"text { -webkit-box-flex: 6; -webkit-flex: 6; -ms-flex: 6; flex: 6; margin: 12px; font-size: 18px; }\n",],undefined,{path:"./pages/mine/footprint/footprint.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mine/footprint/footprint.wxml') } }));
