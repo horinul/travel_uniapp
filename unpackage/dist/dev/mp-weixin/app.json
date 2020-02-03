@@ -13,7 +13,13 @@
     "pages/mine/collect/collect",
     "pages/mine/message/message",
     "pages/mine/comment_history/comment_history",
-    "pages/mine/footprint/footprint"
+    "pages/mine/footprint/footprint",
+    "pages/search/search_detail",
+    "pages/webview/foot",
+    "pages/webview/sport",
+    "pages/webview/science",
+    "pages/webview/study",
+    "pages/webview/rice"
   ],
   "subPackages": [],
   "window": {

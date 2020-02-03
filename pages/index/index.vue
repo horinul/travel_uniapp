@@ -25,23 +25,23 @@
 		</view>
 		<!-- url导向的标志 -->
 		<view class="middle-content">
-			<navigator url="" class="line">
+			<navigator url="../webview/foot" class="line">
 				<image class="img-line" src="../../static/index/foot.png"></image>
 				<view style="font-size:14px">闲逛</view>
 			</navigator>
-			<navigator url="" class="line">
+			<navigator url="../webview/sport" class="line">
 				<image class="img-line" src="../../static/index/sport.png"></image>
 				<view style="font-size:14px">运动</view>
 			</navigator>
-			<navigator url="" class="line">
+			<navigator url="../webview/science" class="line">
 				<image class="img-line" src="../../static/index/science.png"></image>
 				<view style="font-size:14px">科技</view>
 			</navigator>
-			<navigator url="" class="line">
+			<navigator url="../webview/study" class="line">
 				<image class="img-line" src="../../static/index/study.png"></image>
 				<view style="font-size:14px">学习</view>
 			</navigator>
-			<navigator url="" class="line">
+			<navigator url="../webview/rice" class="line">
 				<image class="img-line" src="../../static/index/rice.png"></image>
 				<view style="font-size:14px">吃饭</view>
 			</navigator>

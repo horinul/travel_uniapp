@@ -6,12 +6,12 @@
 				"navigationBarTitleText": "首页"
 			}
 		},
-		 {
-			"path":"pages/search/search",
-			 "style":{
-				 "navigationBarTitleText":"发现"
-			 }
-		 },
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "发现"
+			}
+		},
 		{
 			"path": "pages/mine/mine",
 			"style": {
@@ -19,50 +19,69 @@
 			}
 		},
 		{
-			"path":"pages/register/entrance"
+			"path": "pages/register/entrance"
 		},
 		{
-			"path":"pages/register/login"
+			"path": "pages/register/login"
 		},
 		{
-			"path":"pages/register/regist"
+			"path": "pages/register/regist"
 		},
 		{
-			"path":"pages/register/forget"
+			"path": "pages/register/forget"
 		},
 		{
-			"path":"pages/index/intro"
+			"path": "pages/index/intro"
 		},
 		{
-			"path":"pages/detail/detail"
+			"path": "pages/detail/detail"
 		},
 		{
-			"path":"pages/comment/comment"
+			"path": "pages/comment/comment"
 		},
 		{
-			"path":"pages/mine/collect/collect",
-			"style":{
-				"navigationBarTitleText":"我的收藏"
+			"path": "pages/mine/collect/collect",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
 			}
 		},
 		{
-			"path":"pages/mine/message/message",
-			"style":{
-				"navigationBarBackgroundColor":"#FFFFFF",
-				"navigationBarTitleText":"个人信息"
+			"path": "pages/mine/message/message",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "个人信息"
 			}
 		},
 		{
-			"path":"pages/mine/comment_history/comment_history",
-			"style":{
-				"navigationBarTitleText":"我的评论"
+			"path": "pages/mine/comment_history/comment_history",
+			"style": {
+				"navigationBarTitleText": "我的评论"
 			}
 		},
 		{
-			"path":"pages/mine/footprint/footprint",
-			"style":{
-				"navigationBarTitleText":"我的足迹"
+			"path": "pages/mine/footprint/footprint",
+			"style": {
+				"navigationBarTitleText": "我的足迹"
 			}
+		},
+		{
+			"path": "pages/search/search_detail",
+			"style": {
+				"navigationBarTitleText": "内容详情"
+			}
+		},
+		{
+			"path": "pages/webview/foot"
+		},
+		{
+			"path": "pages/webview/sport"
+		}, {
+			"path": "pages/webview/science"
+		},
+		{
+			"path": "pages/webview/study"
+		}, {
+			"path": "pages/webview/rice"
 		}
 
 	],

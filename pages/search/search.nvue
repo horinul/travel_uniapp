@@ -2,6 +2,7 @@
 	<view>
 		<uni-grid :column="2" :showBorder="false" style="height:100%;padding: 0;" :square="false">
 			<uni-grid-item v-for="(item, index) in list" :key="index" style="width: 50%;margin-bottom: 10px;">
+				<navigator url="search_detail">
 					<view class="comment">
 						<image :src="item.src" style="width: 90%;height: 300px;border-radius: 7px;margin: 0 auto;"></image>
 						<text class="text">{{ item.text }}</text>
@@ -16,6 +17,7 @@
 							<text>{{item.like_number}}</text>
 						</view>
 					</view>
+				</navigator>
 			</uni-grid-item>
 		</uni-grid>
 	</view>
